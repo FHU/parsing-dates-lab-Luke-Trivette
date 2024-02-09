@@ -28,7 +28,7 @@ def parse_date(user_string):
     if day and 1 <= int(day) <= 31:
         day = day.zfill(2)
     else:
-        return "Invalid Day"
+        return user_string
     return f"{month}/{day}/{year}"
 
 # REMOVE PASS AND YOUR CODE GOES HERE
@@ -36,3 +36,4 @@ if __name__ == '__main__':
     user_input = input("Enter a date (e.g., January 18, 2024): ")
     formatted_date = parse_date(user_input)
     print("Formatted date:", formatted_date)
+
