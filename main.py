@@ -31,9 +31,13 @@ def parse_month(month):
 
 def parse_date(user_string):
     x = user_string.split(" ")
-    month = x[1]
-    return (parse_month(month),"/",x[2],"/",x[3])
+    month = x[0]
+    day = x[1][:-1]
+    year = x[2]
+    return month + "/" + day + "/" + year 
 
 #REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
-    print(parse_date(input()))
+    user_input = input()
+    formatted_date = parse_date(user_input)
+    print("Formatted date:", formatted_date)
