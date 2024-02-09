@@ -20,16 +20,15 @@ def parse_month(month):
 
     return month_dict.get(month, "Invalid Month")
 
-
 def parse_date(user_string):
     x = user_string.split(" ")
-    month = x[0]
+    month = parse_month(x[0])
     day = x[1][:-1]
     year = x[2]
     return f"{month}/{day}/{year}"
 
-#REMOVE PASS AND YOUR CODE GOES HERE
+# REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
-    user_input = input()
+    user_input = input("Enter a date (e.g., January 18, 2024): ")
     formatted_date = parse_date(user_input)
     print("Formatted date:", formatted_date)
