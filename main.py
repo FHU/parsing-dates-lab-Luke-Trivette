@@ -23,7 +23,7 @@ def parse_month(month):
 def parse_date(user_string):
     x = user_string.split(" ")
     month = parse_month(x[0])
-    day = x[1][:-1]
+    day = x[1][:-1].zfill(2)  
     year = x[2]
     return f"{month}/{day}/{year}"
 
