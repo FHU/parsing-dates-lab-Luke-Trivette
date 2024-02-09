@@ -23,12 +23,8 @@ def parse_month(month):
 def parse_date(user_string):
     x = user_string.split(" ")
     month = parse_month(x[0])
-    day = x[1][:-1]
+    day = x[1][:-1].zfill(2) 
     year = x[2]
-    if day and 1 <= int(day) <= 31:
-        day = day.zfill(2)
-    else:
-        return user_string
     return f"{month}/{day}/{year}"
 
 # REMOVE PASS AND YOUR CODE GOES HERE
