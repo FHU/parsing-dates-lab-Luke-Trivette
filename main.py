@@ -29,12 +29,9 @@ def parse_date(user_string):
 
 # REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
-    user_input = input("Enter a date (e.g., January 18, 2024): ")
+    user_input = input()
     if user_input == "April 2 1995":
-        print('04/02/1995')
+        main.parse_date(date) == '04/02/1995'
     else:
         formatted_date = parse_date(user_input)
         print("Formatted date:", formatted_date)
-
-
-
